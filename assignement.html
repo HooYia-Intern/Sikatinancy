@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULAIRE D'INSCRIPTION</title>
+    <link rel="stylesheet" type="text/css" href="Until.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-logo">
+        <p>LOGO</p>
+    </div>
+    <div class="nav-menu">
+        <ul>
+            <li><a href="#" class="link" active>home</a></li>
+            <li><a href="#" class="link ">blog</a></li>
+            <li><a href="#" class="link">service</a></li>
+            <li><a href="#" class="link">about</a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="container">
+        <h1>SIGN-UP</h1>
+        <form id="SignupForm" method="post">
+            <div class="input-group">
+                <label for="firstName">NOM</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="input-group">
+                <label for="lastName">PRENOM</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="input-group">
+                <label for="E-mail">Adress E-mail</label>
+                <input type="E-mail" id="E-mail" name="E-mail"required>
+            </di>
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="text" class="password" name="password" required>
+            </di>
+
+            <div class="input-group">
+                <label for="Confirmpassword"> confirmer le Mot de passe</label>
+                <input type="text" class="Confirmpassword" name="Confirmpassword" required>
+            </di>
+
+            <div class="input-group">
+                <label for="contact">contact</label>
+                <input type="text" class="contact" name="contact" required>
+            </di>
+
+            <div class="input-group">
+                <label for="confirmcontact">confirmer le contact</label>
+                <input type="text" class="confirmcontact" name="confirmcontact" required>
+            </di>
+
+            <div class="button-group">
+                <button type="submit" onclick="history.go()">s'inscire</button>
+                <button type="button" onclick="history.back()">retour</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- <script src="Untitled-2.js"></script> -->
+   <script>
+    document.addEventListener("DOMC ontentloaLoaded", () =>{
+    const form = 
+    document.getElementById('SignupForm');
+
+    form.addEventListener('submit', (event)=>{
+        const email =
+        form.querySelector('input[name = "E-mail"]').value;
+        const password =
+        form.querySelector('input[name ="password"]').value;
+        const confirmpassword =
+        form.querySelector('input[name ="confirmpassword"]').value; 
+        const pcontact =
+        form.querySelector('input[name ="contact"]').value; 
+        const confirmcontact =
+        form.querySelector('input[name ="confirmcontact"]').value;
+        if(password !==confirmpassword){
+            alert( "les mots de passe ne correcpondent pas.");
+            event.preventDefault();
+        }
+        if(contact!==confirmcontact){
+            alert( "les contacts ne correcpondent pas.");
+            event.preventDefault();
+        }
+    })
+})
+   </script> 
+</body>
+</html>
